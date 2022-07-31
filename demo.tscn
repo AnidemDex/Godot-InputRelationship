@@ -1,0 +1,409 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://demo.gd" type="Script" id=1]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+fps_label_path = NodePath("Control/GridContainer/FPS")
+frame_label_path = NodePath("Control/GridContainer/FrameTick")
+physic_label_path = NodePath("Control/GridContainer/PhysicTick")
+difference_label_path = NodePath("Control/GridContainer/Difference")
+frame_action_path = NodePath("Control/PanelContainer/VBoxContainer/HBoxContainer/FrameAction")
+physic_action_path = NodePath("Control/PanelContainer/VBoxContainer/HBoxContainer/PhysicAction")
+input_action_path = NodePath("Control/PanelContainer/VBoxContainer/HBoxContainer/InputAction")
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+anchor_right = 1.0
+margin_top = 185.0
+margin_bottom = 209.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 34.0
+margin_right = 175.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer"]
+margin_left = 20.0
+margin_right = 141.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "Frame counter (60)"
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 195.0
+margin_right = 306.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer2"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer2/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer2"]
+margin_left = 20.0
+margin_right = 111.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "Current Frame"
+valign = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 326.0
+margin_right = 424.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer3"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer3/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer3"]
+margin_left = 20.0
+margin_right = 98.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "Just Pressed"
+valign = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 444.0
+margin_right = 515.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer4"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer4/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer4"]
+margin_left = 20.0
+margin_right = 71.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "Pressed"
+valign = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 535.0
+margin_right = 640.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer5"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer5/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer5"]
+margin_left = 20.0
+margin_right = 105.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "Just Released"
+valign = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 660.0
+margin_right = 813.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer6"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer6/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer6"]
+margin_left = 20.0
+margin_right = 153.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "_input Event pressed"
+valign = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Control/HBoxContainer"]
+margin_left = 833.0
+margin_right = 990.0
+margin_bottom = 24.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/HBoxContainer/HBoxContainer7"]
+margin_right = 16.0
+margin_bottom = 24.0
+custom_constants/margin_top = 4
+custom_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control/HBoxContainer/HBoxContainer7/MarginContainer"]
+margin_top = 4.0
+margin_right = 16.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 16, 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control/HBoxContainer/HBoxContainer7"]
+margin_left = 20.0
+margin_right = 157.0
+margin_bottom = 24.0
+size_flags_vertical = 7
+text = "_input Event released"
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 223.0
+margin_right = -13.0
+margin_bottom = -8.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+margin_right = 997.0
+margin_bottom = 14.0
+text = "_process()"
+
+[node name="FrameTick" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 18.0
+margin_right = 997.0
+margin_bottom = 182.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer"]
+margin_top = 186.0
+margin_right = 997.0
+margin_bottom = 200.0
+text = "_physic_process()"
+
+[node name="PhysicTick" type="HBoxContainer" parent="Control/VBoxContainer"]
+margin_top = 204.0
+margin_right = 997.0
+margin_bottom = 369.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+margin_left = 89.0
+margin_top = 44.0
+margin_right = 129.0
+margin_bottom = 84.0
+mouse_filter = 2
+custom_constants/vseparation = 10
+custom_constants/hseparation = 16
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/GridContainer"]
+margin_right = 94.0
+margin_bottom = 14.0
+text = "FPS"
+
+[node name="FPS" type="Label" parent="Control/GridContainer"]
+margin_left = 110.0
+margin_right = 128.0
+margin_bottom = 14.0
+text = "???"
+
+[node name="Label7" type="Label" parent="Control/GridContainer"]
+margin_top = 24.0
+margin_right = 94.0
+margin_bottom = 38.0
+text = "Frame tick"
+
+[node name="FrameTick" type="Label" parent="Control/GridContainer"]
+margin_left = 110.0
+margin_top = 24.0
+margin_right = 128.0
+margin_bottom = 38.0
+text = "???"
+
+[node name="Label4" type="Label" parent="Control/GridContainer"]
+margin_top = 48.0
+margin_right = 94.0
+margin_bottom = 62.0
+text = "Physic tick"
+
+[node name="PhysicTick" type="Label" parent="Control/GridContainer"]
+margin_left = 110.0
+margin_top = 48.0
+margin_right = 128.0
+margin_bottom = 62.0
+text = "???"
+
+[node name="Label5" type="Label" parent="Control/GridContainer"]
+margin_top = 72.0
+margin_right = 94.0
+margin_bottom = 86.0
+text = "Physic - Frame"
+
+[node name="Difference" type="Label" parent="Control/GridContainer"]
+margin_left = 110.0
+margin_top = 72.0
+margin_right = 128.0
+margin_bottom = 86.0
+text = "???"
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 56.0
+margin_top = 23.0
+margin_right = 360.0
+margin_bottom = 37.0
+text = "This assumes that you're running at 60 FPS max"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+margin_left = 612.0
+margin_top = 28.0
+margin_right = 834.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 215.0
+margin_bottom = 75.0
+alignment = 1
+
+[node name="Label2" type="Label" parent="Control/PanelContainer/VBoxContainer"]
+margin_right = 208.0
+margin_bottom = 14.0
+text = "Watching \"ui_accept\" action"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="GridContainer" parent="Control/PanelContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 208.0
+margin_bottom = 68.0
+mouse_filter = 2
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_right = 153.0
+margin_bottom = 14.0
+text = "Input status in _process"
+
+[node name="FrameAction" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 157.0
+margin_right = 208.0
+margin_bottom = 14.0
+text = "Unknow"
+
+[node name="Label2" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_top = 18.0
+margin_right = 153.0
+margin_bottom = 32.0
+text = "Input status in _physics"
+
+[node name="PhysicAction" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 157.0
+margin_top = 18.0
+margin_right = 208.0
+margin_bottom = 32.0
+text = "Unknow"
+
+[node name="Label3" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_top = 36.0
+margin_right = 153.0
+margin_bottom = 50.0
+text = "Input status on _input"
+
+[node name="InputAction" type="Label" parent="Control/PanelContainer/VBoxContainer/HBoxContainer"]
+margin_left = 157.0
+margin_top = 36.0
+margin_right = 208.0
+margin_bottom = 50.0
+text = "Unknow"
